@@ -1,0 +1,84 @@
+{
+  "collections": {
+    "users": {
+      "description": "User profiles and specific trading data",
+      "documents": {
+        "{userId}": {
+          "fields": {
+            "email": { "type": "string", "description": "User's registered email address" },
+            "createdAt": { "type": "timestamp", "description": "Date of registration" }
+          },
+          "collections": {
+            "portfolio": {
+              "description": "User paper trading portfolio state",
+              "documents": {
+                "state": {
+                  "fields": {
+                    "cash": { "type": "number", "description": "Available paper cash balance" },
+                    "positions": { "type": "array", "description": "Array of active holding positions" },
+                    "realizedPnL": { "type": "map", "description": "Realized PnL mapped by symbol" }
+                  }
+                }
+              }
+            },
+            "strategies": {
+              "description": "User's automated algorithmic strategy rules",
+              "documents": {
+                "{strategyId}": {
+                  "fields": {
+                    "name": { "type": "string" },
+                    "ticker": { "type": "string" },
+                    "rules": { "type": "map" },
+                    "updatedAt": { "type": "timestamp" }
+                  }
+                }
+              }
+            },
+            "orders": {
+              "description": "Historically executed transactions",
+              "documents": {
+                "{orderId}": {
+                  "fields": {
+                    "ticker": { "type": "string" },
+                    "side": { "type": "string" },
+                    "type": { "type": "string" },
+                    "qty": { "type": "number" },
+                    "price": { "type": "number" },
+                    "timestamp": { "type": "string" }
+                  }
+                }
+              }
+            },
+            "alerts": {
+              "description": "User's customized alerts",
+              "documents": {
+                "{alertId}": {
+                  "fields": {
+                    "ticker": { "type": "string" },
+                    "threshold": { "type": "number" },
+                    "window": { "type": "number" },
+                    "triggered": { "type": "boolean" },
+                    "timestamp": { "type": "string" }
+                  }
+                }
+              }
+            },
+            "logs": {
+              "description": "Quant agent audit logs",
+              "documents": {
+                "{logId}": {
+                  "fields": {
+                    "timestamp": { "type": "string" },
+                    "category": { "type": "string" },
+                    "level": { "type": "string" },
+                    "message": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Automated Multi-Stock Algo Trading Platform",
+  "description": "Cross-platform algorithmic trading application featuring real-time custom technical indicators, risk portfolio engine, simulated/sandbox execution ledger, and live broker integration abstractions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
