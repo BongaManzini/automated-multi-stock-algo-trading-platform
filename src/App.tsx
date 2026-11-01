@@ -3230,6 +3230,32 @@ export default function App() {
             </div>
           )}
 
+          {/* Business First Enterprise Footer */}
+          <footer className="mt-12 pt-6 pb-12 border-t border-panel-border flex flex-col md:flex-row items-center justify-between text-xs text-panel-subtext font-mono gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+              <p className="font-semibold text-panel-heading">
+                &copy; 2026 AlgoTrade Matrix&trade; &bull; Institutional Quantitative Strategy Engine
+              </p>
+              <span className="hidden sm:inline opacity-40">&bull;</span>
+              <span className="text-[11px] text-emerald-500 font-medium flex items-center gap-1.5">
+                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                Real-Time Feeds Active
+              </span>
+            </div>
+            <div className="flex items-center gap-4 text-[11px]">
+              <span>Developed by <strong className="text-panel-heading">Bonga Manzini</strong></span>
+              <span className="opacity-40">&bull;</span>
+              <a 
+                href="https://github.com/BongaManzini/automated-multi-stock-algo-trading-platform" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-indigo-400 hover:text-indigo-300 font-bold flex items-center gap-1 transition-colors"
+              >
+                GitHub Repository
+              </a>
+            </div>
+          </footer>
+
         </div>
 
       </div>
